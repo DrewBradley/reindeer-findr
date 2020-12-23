@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url("./assets/pine-tree.jpg");
+  background-color: rgb(36, 102, 65);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+}
+
+.nav {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  top: 0;
+  background-color: rgb(36, 102, 65);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+}
+
+.nav__reindeer-selector {
+  margin: auto;
+}
+
+.nav__company {
+  margin: auto;
+}
+
+.grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 40% 40%;
+  grid-template-areas: 
+    "a b c d"
+    "e f g h";
+}
+
+.grid__profiles-card {
+  margin: 2%;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  position: relative;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s; 
+}
+
+
+.flip {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.grid__profiles-card-front,
+.grid__profiles-card-back {
+  border-radius: 2%;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid__profiles-card-front {
+  display: grid;
+  grid-template-columns: auto 30%;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 102, 65);
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+}
+
+.grid__profiles-card-back {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 102, 65);
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.card__image {
+  text-align: center;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+  width: 90%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 5% auto auto 5%;
+  grid-area: 1 / -1 / -1 / 1 ;
+}
+
+.card__years {
+  background-color: rgba(149, 188, 149, 0.60);
+  border-radius: 10px;
+  padding: 10%;
+  margin: 20% 20% 0 0;
+  z-index: 1;
+  position: absolute;
+  grid-area: 1 / -1 / -1 / 2;
+  text-align: center;
+}
+
+.card__info {
+  margin: 5%;
+  grid-area: -1 / 1 / 2 / 1;
+}
+
+.card__bio {
+  background-color: rgba(0, 0, 0, 0.243);
+  text-align: center;
+  width: 90%;
+  height: 90%;
+  border-radius: 5%;
+  margin: 5% auto auto 5%;
+}
+
+p {
+  margin: 0;
+}
+
+.card0 {
+  grid-area: a;
+}
+.card1 {
+  grid-area: b;
+}
+.card2 {
+  grid-area: c;
+}
+.card3 {
+  grid-area: d;
+}
+.card4 {
+  grid-area: e;
+}
+.card5 {
+  grid-area: f;
+}
+.card6 {
+  grid-area: g;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+    background-repeat: repeat;
+  }
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a"
+    "b" 
+    "c" 
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
+  }
+  .grid__profiles-card{
+    height: 350px;
+  }
+}
