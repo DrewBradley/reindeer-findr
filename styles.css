@@ -8,6 +8,11 @@ body {
   height: 100vh;
 }
 
+.logo {
+  height: 35px;
+  margin: auto;
+}
+
 .nav {
   z-index: 2;
   position: fixed;
@@ -21,11 +26,14 @@ body {
 }
 
 .nav__reindeer-selector {
-  margin: auto;
+  margin: auto auto auto 5%;
 }
 
 .nav__company {
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: auto;
 }
 
 .grid {
