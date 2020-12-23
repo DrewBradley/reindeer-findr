@@ -11,7 +11,7 @@ const generateCards = () => {
     grid.innerHTML += `
     <section class="grid__profiles-card card${i}">
       <article class="grid__profiles-card-front">
-        <img class="card__image" src="./assets/${deer.name}.jpg" alt="${deer.name}">
+        <img class="card__image" src="./assets/${deer.name.toLowerCase()}.jpg" alt="${deer.name}">
         <section class="card__years">
           <p class="card__years-title">years active</p>
           <p class="card__years-count">${deer.activeYears}</p>
